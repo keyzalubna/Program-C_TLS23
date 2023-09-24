@@ -1,0 +1,184 @@
+//Keyza Lubna Sitanggang (Resnick)
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main(void)
+{
+    float pilih, v, s, l, t, r, p, la;
+    float phi = 3.14;
+    char status;
+    string nama;
+ 
+    cout << "\t\t --- Volume Pada Bangun Ruang --- "<<endl;
+    cout << "==============================="<<endl;
+cout <<endl;
+menu :
+    cout << "\tMenu Utama :" << endl;
+    cout << "\t\t1. Kubus "<< endl;
+    cout << "\t\t2. Balok "<< endl;
+    cout << "\t\t3. Tabung "<<endl;
+    cout << "\t\t4. Bola "<<endl;
+    cout << "\t\t5. Prisma "<<endl;
+
+cout << endl;
+    cout << "Silahkan Masukkan Menu yang Anda Pilih : ";
+    cin >> pilih;
+
+    if (pilih==1)
+    {
+        Kubus :
+cout <<endl;
+        cout << "\t\t --- Kubus ---"<<endl;
+        cout << "============="<<endl;
+cout <<endl;
+        cout << "\tMasukkan Besar Sisi Kubus : ";
+        cin >> s;
+        cout << endl;
+     
+        v = s*s*s;
+     
+        cout << "\tVolume = s*s*s = s^3"<<endl;
+        cout << "\tVolume = " << v;
+        cout << endl;
+     
+        cout << "\nApakah Anda Ingin Memilih Kembali? (Y = Ya /T = Tidak) --> ";
+        cin >> status;
+cout <<endl;
+        if(status =='y' || status =='Y')
+                goto Kubus;
+        else if (status == 'm' || status == 'M')
+                goto menu;
+        else goto end;
+    }
+    
+    else if (pilih==2)
+    {
+        Balok :
+cout << endl;
+        cout << "\t\t--- Balok ---"<<endl;
+        cout << "=============="<<endl;
+cout << endl;
+        cout << "\tMasukkan Panjang Balok : ";
+        cin >> p;
+        cout << "\n\tMasukkan Lebar Balok : ";
+        cin >> l;
+        cout << "\n\tMasukkan Tinggi Balok : ";
+        cin >> t;
+        cout << endl;
+   
+        v = p*l*t;
+        
+        cout << "\n\tVolume = p*l*t"<<endl;
+        cout << "\tVolume = " <<v;
+        cout<<endl;
+     
+cout << "\nApakah Anda Ingin Memilih Kembali? (Y = Ya /T = Tidak /M= Menu) --> ";
+        cin >> status;
+cout << endl;
+        if(status =='y' || status =='Y')
+                goto Balok;
+        else if (status == 'm' || status == 'M')
+                goto menu;
+        else
+                goto end;
+    }
+    else if (pilih==3)
+    {
+        Tabung :
+        cout <<endl;
+        cout << "\t\t--- Tabung ---"<<endl;
+        cout << "=============="<<endl;
+        cout << "\tMasukkan jari-jari alas tabung : ";
+        cin >> r;
+        cout << "\tMasukkan tinggi tabung : ";
+        cin >> t;
+     
+        v= phi*r*r*t;
+     
+        cout << "\n\n\tVolume = phi*r*r*t = p.r^2.t";
+        cout << "\n\tVolume = 3.14* " << r << " * " << r << " * " << t << "";
+        cout << "\n\tVolume = " <<v<<endl;
+
+cout << "\nApakah Anda Ingin Memilih Kembali? (Y = Ya /T = Tidak) --> ";
+        cin >> status;
+cout << endl;
+        if(status =='y' || status =='Y')
+                goto Tabung;
+        else if (status == 'm' || status == 'M')
+                goto menu;
+        else
+                goto end;
+    }
+    else if (pilih==4)
+        {
+        Bola :
+        cout << endl;
+        cout << "\t\t--- Bola --- "<<endl;
+        cout << "=============="<<endl;
+        cout << "\tMasukkan Jari-jari Bola : ";
+        cin >> r;
+
+        v = 1.33*phi*r*r*r;
+
+        cout << "\tVolume = 4/3 * phi * r * r * r"<<endl;
+        cout << "\tVolume = 4/3 * 3.14 * " << r << " * " << r << " * "<<r<<""<<endl;
+        cout << "\n\tVolume = "<<v<<endl;
+     
+cout << "\nApakah Anda Ingin Memilih Kembali? (Y = Ya /T = Tidak) --> ";
+        cin >> status;
+cout << endl;
+        if(status =='y' || status =='Y')
+                goto Bola;
+        else if (status == 'm' || status == 'M')
+                goto menu;
+        else
+                goto end;
+        }
+
+    else if (pilih==5)
+    {
+        Prisma :
+        cout << "\t\t--- Prisma ---"<<endl;
+        cout << "=============="<<endl;
+        cout << "\tMasukkan Luas Alas = ";
+        cin >> la;
+        cout << endl;
+        cout << "\tMasukkan Tinggi = ";
+        cin >> t;
+        cout <<endl;
+     
+        v = la*t;
+     
+        cout << "\tVolume = "<<v<<endl;
+     
+        cout << "\nApakah Anda Ingin Memilih Kembali? (Y = Ya /T = Tidak) --> ";
+        cin >> status;
+cout << endl;
+        if(status =='y' || status =='Y')
+                goto Prisma;
+        else if (status == 'm' || status == 'M')
+                goto menu;
+        else
+                goto end;
+    }
+ 
+    else
+    {
+        cout << "\n\n\tMenu yang Anda Pilih Salah"<<endl;
+         
+        cout << "\nSilahkan Kembali ke Menu Utama (Y=Ya / T=Tidak) --> ";
+        cin >> status;
+cout << endl;
+        if(status =='y' || status =='Y')
+                goto menu;
+        else
+                goto end;
+    }
+    end :
+    cout << "\n--- Terima kasih --- "<<endl;
+
+    system("PAUSE");
+    return 0;
+}
